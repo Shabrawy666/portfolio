@@ -8,17 +8,33 @@
 </head>
 <body>
 
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <h2 class="nav-logo">Khaled<span>Shabrawy</span></h2>
+
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Dark Mode Button -->
+    <button id="darkToggle" class="dark-btn">🌙</button>
+</nav>
+
 <!-- HEADER -->
 <header>
-    <div class="header-content">
+    <div class="header-content fade-in">
         <img src="images/me.gif" alt="Khaled Shabrawy" class="profile-pic">
         <h1>Khaled Shabrawy</h1>
         <p>Data Analyst | Python | SQL | Power BI | Data Visualization</p>
     </div>
 </header>
 
-<!-- ABOUT ME -->
-<section id="about">
+<!-- ABOUT -->
+<section id="about" class="fade-in-section">
     <h2>About Me</h2>
     <p>
         I am a dedicated Data Analyst with strong experience in Python, SQL, Power BI, 
@@ -28,7 +44,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="fade-in-section">
     <h2>Skills</h2>
     <div class="skills-grid">
 
@@ -76,7 +92,7 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
+<section id="education" class="fade-in-section">
     <h2>Education</h2>
     <ul>
         <li>B.Sc. in Computer Science / IT (Your University, Year)</li>
@@ -85,7 +101,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="fade-in-section">
     <h2>Projects</h2>
     <div class="project-cards">
 
@@ -117,7 +133,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="fade-in-section">
     <h2>Get in Touch</h2>
     <p>You can reach me anytime through the following:</p>
 
@@ -147,6 +163,32 @@
     <p>&copy; 2025 Khaled Shabrawy. All rights reserved.</p>
 </footer>
 
+<!-- DARK MODE SCRIPT -->
+<script>
+    const toggleBtn = document.getElementById("darkToggle");
+    toggleBtn.onclick = () => {
+        document.body.classList.toggle("dark-mode");
+
+        toggleBtn.textContent =
+            document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    };
+
+    // Fade-in on scroll
+    const sections = document.querySelectorAll(".fade-in-section");
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
-
