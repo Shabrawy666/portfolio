@@ -8,11 +8,21 @@
     --text: #024959;
 }
 
+/* DARK MODE COLORS */
+body.dark-mode {
+    --bg-color: #0f1c26;
+    --text: #e6f2f2;
+    --white: #142733;
+    --secondary: #0b3941;
+    --primary: #2aa9a1;
+}
+
 /* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Arial', sans-serif;
 }
 
@@ -20,6 +30,51 @@ body {
     background-color: var(--bg-color);
     color: var(--text);
     line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.dark-btn {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.dark-btn:hover {
+    background: var(--secondary);
 }
 
 /* HEADER */
@@ -38,18 +93,38 @@ header {
     animation: float 3s ease-in-out infinite;
 }
 
+/* FLOAT ANIMATION */
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 
-h1 { font-size: 2.5em; margin-bottom: 10px; }
-p { font-size: 1.1em; }
-
 /* SECTIONS */
-section { padding: 50px 20px; max-width: 1000px; margin: auto; }
-section h2 { text-align: center; font-size: 2em; margin-bottom: 30px; color: var(--dark); }
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+/* FADE-IN SCROLL ANIMATION */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* SKILLS */
 .skills-grid {
@@ -77,15 +152,7 @@ section h2 { text-align: center; font-size: 2em; margin-bottom: 30px; color: var
 .skill-box img {
     width: 50px;
     height: 50px;
-    object-fit: contain;
     margin-bottom: 10px;
-}
-
-/* EDUCATION */
-#education ul { 
-    list-style-type: disc; 
-    padding-left: 20px; 
-    font-size: 1.1em;
 }
 
 /* PROJECTS */
@@ -143,12 +210,4 @@ footer {
     background-color: var(--secondary);
     color: var(--white);
     margin-top: 50px;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .project-cards {
-        flex-direction: column;
-        align-items: center;
-    }
 }
