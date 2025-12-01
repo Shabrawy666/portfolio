@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khaled Shabrawy | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Include Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,7 +13,7 @@
     <div class="header-content">
         <img src="images/me.gif" alt="Khaled Shabrawy" class="profile-pic">
         <h1>Khaled Shabrawy</h1>
-        <p>Data Analyst | Python | SQL | Power BI</p>
+        <p>Data Analyst | Python | SQL | Power BI | Data Visualization</p>
     </div>
 </header>
 
@@ -23,24 +21,57 @@
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I'm a passionate Data Analyst with experience in analyzing data, creating dashboards, 
-        and providing actionable insights. I love solving complex problems with Python, SQL, 
-        and data visualization tools like Power BI and Tableau.
+        I am a dedicated Data Analyst with strong experience in Python, SQL, Power BI, 
+        and data visualization. I enjoy finding insights in datasets, solving business problems, 
+        and transforming raw data into actionable results.
     </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill"><i class="fab fa-python"></i> Python</div>
-        <div class="skill"><i class="fas fa-database"></i> SQL</div>
-        <div class="skill"><i class="fas fa-chart-line"></i> Power BI</div>
-        <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
-        <div class="skill"><i class="fas fa-chart-pie"></i> Tableau</div>
-        <div class="skill"><i class="fas fa-cogs"></i> Pandas & NumPy</div>
-        <div class="skill"><i class="fas fa-chart-area"></i> Matplotlib & Seaborn</div>
-        <div class="skill"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+    <div class="skills-grid">
+
+        <div class="skill-box">
+            <img src="images/skills/python.png" alt="Python">
+            <p>Python</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/sql.png" alt="SQL">
+            <p>SQL</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/powerbi.png" alt="Power BI">
+            <p>Power BI</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/excel.png" alt="Excel">
+            <p>Excel</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/tableau.png" alt="Tableau">
+            <p>Tableau</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/pandas.png" alt="Pandas">
+            <p>Pandas</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/numpy.png" alt="NumPy">
+            <p>NumPy</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/skills/github.png" alt="GitHub">
+            <p>Git & GitHub</p>
+        </div>
+
     </div>
 </section>
 
@@ -49,7 +80,7 @@
     <h2>Education</h2>
     <ul>
         <li>B.Sc. in Computer Science / IT (Your University, Year)</li>
-        <li>Udemy & Online Courses: Python, SQL, Power BI</li>
+        <li>Completed multiple online courses in Python, SQL, and Power BI</li>
     </ul>
 </section>
 
@@ -57,48 +88,57 @@
 <section id="projects">
     <h2>Projects</h2>
     <div class="project-cards">
-        <!-- Udemy Project -->
-        <a href="https://github.com/KhaledShabrawy/Udemy-Course-Analysis" target="_blank" class="project-card">
+
+        <a href="https://github.com/Shabrawy666/udemy-courses-analysis-2011-2017" target="_blank" class="project-card">
             <img src="images/udemy.png" alt="Udemy Project">
             <div class="project-content">
-                <h3>Udemy Course Analysis</h3>
-                <p>Analyzed Udemy courses to identify trends in pricing, popularity, and engagement.</p>
+                <h3>Udemy Courses Analysis</h3>
+                <p>Analyzed 2011–2017 Udemy data to uncover trends in pricing, popularity, and course demand.</p>
             </div>
         </a>
 
-        <!-- Airline Project -->
-        <a href="https://github.com/KhaledShabrawy/Airline-Satisfaction-Analysis" target="_blank" class="project-card">
+        <a href="https://github.com/Shabrawy666/airline-passenger-satisfaction-analysis" target="_blank" class="project-card">
             <img src="images/airline.png" alt="Airline Project">
             <div class="project-content">
-                <h3>Airline Passenger Satisfaction</h3>
-                <p>Analyzed factors affecting passenger satisfaction using Python and data visualization.</p>
+                <h3>Airline Satisfaction Analysis</h3>
+                <p>Studied factors affecting satisfaction and comfort levels across passenger segments.</p>
             </div>
         </a>
 
-        <!-- Superstore Project -->
-        <a href="https://github.com/KhaledShabrawy/Superstore-Sales-Analysis" target="_blank" class="project-card">
+        <a href="https://github.com/Shabrawy666/superstore-sales-profit-analysis" target="_blank" class="project-card">
             <img src="images/superstore.png" alt="Superstore Project">
             <div class="project-content">
                 <h3>Superstore Sales Analysis</h3>
-                <p>Studied sales, profit, and discount patterns to identify business opportunities and risks.</p>
+                <p>Evaluated profit/loss patterns and identified business insights to improve operations.</p>
             </div>
         </a>
+
     </div>
 </section>
 
-<!-- GET IN TOUCH -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Get in Touch</h2>
-    <p>If you’d like to collaborate or have a question, feel free to contact me:</p>
-    <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/KhaledShabrawy" target="_blank">GitHub</a>
+    <p>You can reach me anytime through the following:</p>
+
+    <div class="contact-list">
+        <p><strong>📞 Phone:</strong> +20 101 598 6877</p>
+
+        <p><strong>📧 Email:</strong> 
+            <a href="mailto:khaledshbrawy@gmail.com">khaledshbrawy@gmail.com</a>
+        </p>
+
+        <p><strong>🔗 LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/khaled-shabrawy-115275238" target="_blank">
+                linkedin.com/in/khaled-shabrawy-115275238
+            </a>
+        </p>
+
+        <p><strong>🐙 GitHub:</strong>
+            <a href="https://github.com/Shabrawy666" target="_blank">
+                github.com/Shabrawy666
+            </a>
+        </p>
     </div>
 </section>
 
