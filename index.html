@@ -1,176 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khaled Shabrawy | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Khaled Shabrawy | Data Analyst Portfolio</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+    <!-- Replace the script above with your Font Awesome kit or use the CDN version if you prefer. -->
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav class="navbar">
-    <h2 class="nav-logo">Khaled<span>Shabrawy</span></h2>
+    <div class="nav-left">
+        <h2 class="nav-logo">Khaled <span>Shabrawy</span></h2>
+        <button id="darkToggle" class="dark-btn" aria-label="Toggle dark mode">🌙</button>
+    </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" role="navigation">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-
-    <!-- Dark Mode Button -->
-    <button id="darkToggle" class="dark-btn">🌙</button>
 </nav>
 
-<!-- HEADER -->
-<header>
-    <div class="header-content fade-in">
-        <img src="images/me.gif" alt="Khaled Shabrawy" class="profile-pic">
-        <h1>Khaled Shabrawy</h1>
-        <p>Data Analyst | Python | SQL | Power BI | Data Visualization</p>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="profile-left">
+            <img src="images/me.gif" alt="Khaled Shabrawy" class="profile-pic">
+        </div>
+        <div class="profile-right">
+            <h1 class="name">Khaled El-Shabrawy</h1>
+            <p class="title">Data Analyst — Python · SQL · Power BI · Data Visualization</p>
+
+            <div class="contact-icons">
+                <a href="tel:+201015986877" aria-label="Phone"><img src="icons/phone.png" alt="phone" class="icon-img"> +20 101 598 6877</a>
+                <a href="mailto:khaledshbrawy@gmail.com" aria-label="Email"><img src="icons/email.png" alt="email" class="icon-img"> khaledshbrawy@gmail.com</a>
+                <a href="https://www.linkedin.com/in/khaled-shabrawy-115275238" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="icons/linkedin.png" alt="linkedin" class="icon-img"> LinkedIn</a>
+                <a href="https://github.com/Shabrawy666" target="_blank" rel="noopener" aria-label="GitHub"><img src="icons/github.png" alt="github" class="icon-img"> GitHub</a>
+            </div>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="#projects">View Projects</a>
+                <a class="btn btn-outline" href="Khaled_Shabrawy_CV.pdf" download>Download CV</a>
+            </div>
+        </div>
     </div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="fade-in-section">
-    <h2>About Me</h2>
-    <p>
-        I am a dedicated Data Analyst with strong experience in Python, SQL, Power BI, 
-        and data visualization. I enjoy finding insights in datasets, solving business problems, 
-        and transforming raw data into actionable results.
-    </p>
-</section>
+<main>
 
-<!-- SKILLS -->
-<section id="skills" class="fade-in-section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
+    <hr class="section-line" />
 
-        <div class="skill-box">
-            <img src="images/images/skills/python.png" alt="Python">
-            <p>Python</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/sql.png" alt="SQL">
-            <p>SQL</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/powerbi.png" alt="Power BI">
-            <p>Power BI</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/excel.png" alt="Excel">
-            <p>Excel</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/tableau.png" alt="Tableau">
-            <p>Tableau</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/pandas.png" alt="Pandas">
-            <p>Pandas</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/numpy.png" alt="NumPy">
-            <p>NumPy</p>
-        </div>
-
-        <div class="skill-box">
-            <img src="images/images/skills/github.png" alt="GitHub">
-            <p>Git & GitHub</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="fade-in-section">
-    <h2>Education</h2>
-    <ul>
-        <li>B.Sc. in Computer Science / IT (Your University, Year)</li>
-        <li>Completed multiple online courses in Python, SQL, and Power BI</li>
-    </ul>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="fade-in-section">
-    <h2>Projects</h2>
-    <div class="project-cards">
-
-        <a href="https://github.com/Shabrawy666/udemy-courses-analysis-2011-2017" target="_blank" class="project-card">
-            <img src="images/udemy.png" alt="Udemy Project">
-            <div class="project-content">
-                <h3>Udemy Courses Analysis</h3>
-                <p>Analyzed 2011–2017 Udemy data to uncover trends in pricing, popularity, and course demand.</p>
-            </div>
-        </a>
-
-        <a href="https://github.com/Shabrawy666/airline-passenger-satisfaction-analysis" target="_blank" class="project-card">
-            <img src="images/airline.png" alt="Airline Project">
-            <div class="project-content">
-                <h3>Airline Satisfaction Analysis</h3>
-                <p>Studied factors affecting satisfaction and comfort levels across passenger segments.</p>
-            </div>
-        </a>
-
-        <a href="https://github.com/Shabrawy666/superstore-sales-profit-analysis" target="_blank" class="project-card">
-            <img src="images/superstore.png" alt="Superstore Project">
-            <div class="project-content">
-                <h3>Superstore Sales Analysis</h3>
-                <p>Evaluated profit/loss patterns and identified business insights to improve operations.</p>
-            </div>
-        </a>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade-in-section">
-    <h2>Get in Touch</h2>
-    <p>You can reach me anytime through the following:</p>
-
-    <div class="contact-list">
-        <p><strong>📞 Phone:</strong> +20 101 598 6877</p>
-
-        <p><strong>📧 Email:</strong> 
-            <a href="mailto:khaledshbrawy@gmail.com">khaledshbrawy@gmail.com</a>
+    <!-- ABOUT -->
+    <section id="about" class="container fade-in-section">
+        <h2>About</h2>
+        <p class="lead">
+            Junior Data Analyst with strong capabilities in Python, SQL, Machine Learning, and Data Visualization.
+            Passionate about solving business problems using data-driven insights. Experienced in EDA, dashboards,
+            cloud fundamentals, and predictive modeling. Motivated to grow and take on real-world analytics challenges.
         </p>
+    </section>
 
-        <p><strong>🔗 LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/khaled-shabrawy-115275238" target="_blank">
-                linkedin.com/in/khaled-shabrawy-115275238
-            </a>
-        </p>
+    <hr class="section-line" />
 
-        <p><strong>🐙 GitHub:</strong>
-            <a href="https://github.com/Shabrawy666" target="_blank">
-                github.com/Shabrawy666
-            </a>
-        </p>
-    </div>
-</section>
+    <!-- SKILLS -->
+    <section id="skills" class="container fade-in-section">
+        <h2>Skills</h2>
 
-<!-- FOOTER -->
+        <div class="skills-grid">
+            <div class="skill-col">
+                <h3>Programming & Libraries</h3>
+                <ul>
+                    <li>Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn)</li>
+                    <li>R, Java, SQL</li>
+                </ul>
+            </div>
+
+            <div class="skill-col">
+                <h3>Tools & Cloud</h3>
+                <ul>
+                    <li>Power BI, Tableau, Excel, Jupyter</li>
+                    <li>Git, Docker, AWS basics, Linux</li>
+                </ul>
+            </div>
+
+            <div class="skill-col">
+                <h3>Databases & Analytics</h3>
+                <ul>
+                    <li>MySQL, PostgreSQL, Microsoft SQL Server</li>
+                    <li>EDA, Feature Engineering, Predictive Modeling</li>
+                </ul>
+            </div>
+
+            <div class="skill-col">
+                <h3>AI Concepts</h3>
+                <ul>
+                    <li>Supervised Learning, Deep Learning (TensorFlow), Model Evaluation</li>
+                    <li>Data cleaning, hypothesis testing, A/B-style thinking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-line" />
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container fade-in-section">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <!-- Udemy -->
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/udemy.png" alt="Udemy Courses Analysis">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Udemy Courses Analysis (2011–2017)</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Shabrawy666/udemy-courses-analysis-2011-2017" target="_blank" rel="noopener" aria-label="Udemy repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="project-intro">
+                        Exploratory analysis of Udemy courses to reveal trends in pricing, ratings, topics, and instructor performance.
+                    </p>
+
+                    <ul class="project-details">
+                        <li>Data collection & preprocessing: handled missing values, normalized categories, and parsed dates.</li>
+                        <li>Trend analysis across years to identify rising subject categories and price elasticity.</li>
+                        <li>Built interactive visualizations to compare rating distribution, revenue proxies and top instructors.</li>
+                        <li>Key deliverable: Dashboard (Power BI) + Python notebooks with reproducible EDA and feature engineering.</li>
+                    </ul>
+
+                    <div class="project-tech">Technologies: Python, Pandas, Matplotlib, Seaborn, Power BI</div>
+                </div>
+            </article>
+
+            <!-- Airline -->
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/airline.png" alt="Airline Passenger Satisfaction">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Airline Passenger Satisfaction Analysis</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Shabrawy666/airline-passenger-satisfaction-analysis" target="_blank" rel="noopener" aria-label="Airline repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="project-intro">
+                        Analysis and modeling to understand what drives passenger satisfaction (comfort, service, delays, flight distance).
+                    </p>
+
+                    <ul class="project-details">
+                        <li>Performed correlation analysis between flight distance, service ratings, and overall satisfaction.</li>
+                        <li>Engineered features: delay buckets, seat comfort indices, class encoding.</li>
+                        <li>Built classification models to predict satisfied vs not satisfied passengers with model explainability reports.</li>
+                        <li>Produced dashboards to highlight top improvement areas for customer experience.</li>
+                    </ul>
+
+                    <div class="project-tech">Technologies: Python, Pandas, SciPy, Scikit-Learn, Power BI</div>
+                </div>
+            </article>
+
+            <!-- Superstore -->
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/superstore.png" alt="Superstore Sales Analysis">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Superstore Sales & Profit Analysis</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Shabrawy666/superstore-sales-profit-analysis" target="_blank" rel="noopener" aria-label="Superstore repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="project-intro">
+                        Comprehensive EDA to find loss-making segments, shipping inefficiencies, and growth opportunities.
+                    </p>
+
+                    <ul class="project-details">
+                        <li>Segmented performance by region, category and customer segment to detect loss-making SKUs.</li>
+                        <li>Performed cohort and retention-style analysis on repeat business patterns.</li>
+                        <li>Recommended operational and pricing improvements; produced executive summary dashboard.</li>
+                        <li>Delivered reproducible notebooks and dashboard templates for stakeholders.</li>
+                    </ul>
+
+                    <div class="project-tech">Technologies: Excel, Tableau, Python</div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <hr class="section-line" />
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="container fade-in-section">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="role">NTI — Data Analyst Intern</div>
+                    <div class="date">Oct 2025 – Dec 2025</div>
+                </div>
+                <div class="timeline-right">
+                    <ul>
+                        <li>Performed SQL extraction, data transformations and automated reporting pipelines.</li>
+                        <li>Analyzed large datasets and built dashboards (Power BI, Tableau) to support strategic decisions.</li>
+                        <li>Wrote Python scripts for automation and analytics; prepared stakeholder reports.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="role">Microsoft Learn Student Club — Data Science & ML Intern</div>
+                    <div class="date">Apr 2024 – Oct 2024</div>
+                </div>
+                <div class="timeline-right">
+                    <ul>
+                        <li>Defined business problems and delivered data-driven solutions using ML and visualization.</li>
+                        <li>Collected data via APIs and web scraping; completed full ETL pipeline and modeling.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="role">Mathematical Assistant</div>
+                    <div class="date">Jan 2023 – Present</div>
+                </div>
+                <div class="timeline-right">
+                    <ul>
+                        <li>Tutored students, prepared materials, and performed data organization and reporting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="role">English Assistant</div>
+                    <div class="date">Oct 2022 – Jan 2023</div>
+                </div>
+                <div class="timeline-right">
+                    <ul>
+                        <li>Supported students, developed lesson material and improved communication skills.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="section-line" />
+
+    <!-- EDUCATION -->
+    <section id="education" class="container fade-in-section">
+        <h2>Education</h2>
+
+        <div class="education-grid">
+            <div class="edu-card">
+                <h3>Alexandria University — Faculty of Computers and Data Science</h3>
+                <p>B.Sc. — Computer Science / Data Science</p>
+                <p class="edu-meta">09/2022 – 06/2025 · GPA: 3.34 / 4.00</p>
+            </div>
+
+            <div class="edu-card">
+                <h3>Frontend Web Development Trainee — Alexandria University</h3>
+                <p>60-hour training: HTML, CSS, JavaScript, Bootstrap, AngularJS</p>
+                <p class="edu-meta">07/2023 – 08/2023</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-line" />
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="container fade-in-section">
+        <h2>Certificates</h2>
+
+        <ul class="cert-list">
+            <li><strong>Google Advanced Data Analytics Professional Certificate</strong></li>
+            <li><strong>DataCamp - Data Analyst in Power BI Certificate</strong></li>
+            <li><strong>Data Analysis: Skills for the Freelance Professional (120 Hours)</strong> — National Telecommunication Institute (NTI)</li>
+        </ul>
+    </section>
+
+    <hr class="section-line" />
+
+    <!-- CONTACT -->
+    <section id="contact" class="container fade-in-section">
+        <h2>Contact</h2>
+        <p class="lead">I'm available for analytics roles, freelance projects, and collaborations. Let's talk.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h4>Phone</h4>
+                <p class="num">+20 101 598 6877</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Email</h4>
+                <p><a href="mailto:khaledshbrawy@gmail.com">khaledshbrawy@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/khaled-shabrawy-115275238" target="_blank" rel="noopener">linkedin.com/in/khaled-shabrawy-115275238</a></p>
+            </div>
+
+            <div class="contact-card">
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/Shabrawy666" target="_blank" rel="noopener">github.com/Shabrawy666</a></p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
 <footer>
-    <p>&copy; 2025 Khaled Shabrawy. All rights reserved.</p>
+    <p>&copy; 2025 Khaled Shabrawy. All rights reserved. — Alexandria, Egypt</p>
 </footer>
 
-<!-- DARK MODE SCRIPT -->
+<!-- Dark Mode & Fade-in script -->
 <script>
     const toggleBtn = document.getElementById("darkToggle");
     toggleBtn.onclick = () => {
         document.body.classList.toggle("dark-mode");
-
-        toggleBtn.textContent =
-            document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     };
 
     // Fade-in on scroll
@@ -184,7 +362,7 @@
                 }
             });
         },
-        { threshold: 0.2 }
+        { threshold: 0.15 }
     );
 
     sections.forEach(section => observer.observe(section));
